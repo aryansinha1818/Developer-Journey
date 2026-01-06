@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+npm-debug.log
+
+# Environment variables
+.env
+
+# macOS
+.DS_Store
+
+# IDE specific
+.idea/
+.vscode/
+
+# Local development files
+package-lock.json
+
+# Optional: Ignore local development files
+*.local.*

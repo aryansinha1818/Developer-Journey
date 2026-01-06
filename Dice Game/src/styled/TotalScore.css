@@ -1,0 +1,13 @@
+.score_container {
+  max-width: 200px;
+  text-align: center;
+}
+
+.score_container h1 {
+  font-size: 100px;
+  line-height: 100px;
+}
+.score_container p {
+  font-size: 24px;
+  font-weight: 500px;
+}

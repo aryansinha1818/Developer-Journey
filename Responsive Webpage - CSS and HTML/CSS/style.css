@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#logo {
+  margin: 15px 36px;
+}
+
+#logo img {
+  height: 64px;
+  margin: 0px 12px;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#navbar ul {
+  display: flex;
+}
+
+#navbar ul li {
+  color: goldenrod;
+  list-style-type: none;
+  font-size: 1.3rem;
+}
+
+#navbar ul li a {
+  color: #5a3a25;
+  display: block;
+  padding: 3px 22px;
+  border-radius: 20px;
+}
+
+#navbar::before {
+  content: " ";
+  background-color: black;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+#navbar ul li a:hover {
+  color: black;
+  background-color: rgb(247, 191, 8);
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  padding: 2px 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+#home::before {
+  content: " ";
+  position: absolute;
+  background: url("../img/grocery.jpg");
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.8;
+  background-size: cover;
+}
+
+#home h1 {
+  text-decoration: solid;
+}
+
+#home p {
+  color: #4f4921;
+  text-decoration: solid;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}

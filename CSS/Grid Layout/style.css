@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgb(223, 217, 222);
+}
+body {
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  display: grid;
+  row-gap: 1px;
+  column-gap: 1px;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+  width: 100%;
+  padding: 4rem;
+}
+.item {
+  background-color: red;
+  border: 3px solid black;
+}
+
+.container .item:nth-child(1) {
+  background-color: #43872e;
+}
+
+.container .item:nth-child(2) {
+  background: #c4a105;
+}

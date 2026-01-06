@@ -1,0 +1,8 @@
+- Users can create posts.
+- User authentication (login and register).
+- Logout feature.
+- Post creation functionality.
+- Post like functionality.
+- Post delete functionality.
+
+

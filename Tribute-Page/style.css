@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(149, 183, 17);
+    border-color: wheat;
+    border: bold;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text {
+    color: rgb(16, 68, 214);
+    display: contents;
+}
+
+.css1 {
+    padding: 4px;
+    width: 200px;
+    background-color: #eeeeee;
+    border: none;
+    box-shadow: 1px 1px 2px #bbbbbb;
+    cursor: pointer;
+}

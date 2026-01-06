@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Register & Login</title>
+  </head>
+  <body class="bg-gradient-to-br from-gray-100 to-gray-200 text-gray-800">
+    <%- include('partials/header') %> <% if (typeof error !== 'undefined' &&
+    error && error.length > 0) { %>
+    <div
+      class="fixed top-6 left-1/2 transform -translate-x-1/2 bg-red-500 text-white px-6 py-2 rounded-lg shadow-lg"
+    >
+      <%= error %>
+    </div>
+    <% } %>
+
+    <div
+      class="min-h-screen flex flex-col md:flex-row items-center justify-center px-4 py-12 space-y-12 md:space-y-0 md:space-x-12"
+    >
+      <!-- Register Section -->
+      <div class="bg-white rounded-xl shadow-md p-8 w-full max-w-md">
+        <h3 class="text-3xl font-bold mb-1 text-blue-600">Scratch</h3>
+        <h4 class="text-lg font-semibold mb-6">Create your account</h4>
+        <form
+          action="/users/register"
+          method="post"
+          autocomplete="off"
+          class="space-y-4"
+        >
+          <input
+            type="text"
+            name="fullname"
+            placeholder="Full Name"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300"
+          />
+          <input
+            type="submit"
+            value="Create Account"
+            class="w-full py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 cursor-pointer transition"
+          />
+        </form>
+      </div>
+
+      <!-- Login Section -->
+      <div class="bg-white rounded-xl shadow-md p-8 w-full max-w-md">
+        <h4 class="text-lg font-semibold mb-6">Login to your account</h4>
+        <form
+          action="/users/login"
+          method="post"
+          autocomplete="off"
+          class="space-y-4"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-300"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-300"
+          />
+          <input
+            type="submit"
+            value="Login"
+            class="w-full py-2 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 cursor-pointer transition"
+          />
+        </form>
+      </div>
+    </div>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>

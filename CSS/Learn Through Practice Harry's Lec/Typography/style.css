@@ -1,0 +1,15 @@
+body {
+    padding: 10%;
+    font-size: 2rem;
+}
+
+
+/* input,
+bottom {
+    font: inherit;
+} */
+
+p {
+    /* text-decoration: overline; */
+    font-family: monospace;
+}

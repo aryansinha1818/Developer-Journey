@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 30px;
+  font-family: gilroy;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#box {
+  height: 300px;
+  width: 300px;
+  background-color: salmon;
+  border: 2px solid black;
+  position: relative;
+}
+
+button {
+  position: absolute;
+  bottom: 0;
+  left: 15vh;
+  background-color: yellow;
+  border: none;
+  color: #0813e4;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#box::before {
+  content: "❤️";
+}
+
+#box::after {
+  content: "😁";
+}

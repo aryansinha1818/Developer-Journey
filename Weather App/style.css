@@ -1,0 +1,24 @@
+.container-fluid {
+  padding: 0;
+  bottom: 0;
+  background: rgb(79, 136, 158);
+}
+
+#submit {
+  background: #cfc5c5;
+}
+
+#weather-bg {
+  background: #bdcf18;
+}
+#temp-bg {
+  background: #f7ad19;
+}
+
+#humidity-bg {
+  background: #ffd275;
+}
+
+#wind-bg {
+  background: #ffc447;
+}

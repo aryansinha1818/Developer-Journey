@@ -1,0 +1,25 @@
+body {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+.content {
+    width: 345px;
+    height: 423px;
+    background-color: red;
+    margin: 13px;
+    border: solid black 20px;
+    padding: 20px;
+    border-color: aquamarine;
+}
+
+.box {
+    background: #0f0;
+    border: 20px solid brown;
+    margin: 13px;
+    padding: 20px;
+    height: 100px;
+    width: 240px;
+    box-sizing: border-box;
+}

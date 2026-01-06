@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
+body {
+    padding: 10%;
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    cursor: ;
+}
+
+ul {
+    padding: 1.5rem;
+    color: red;
+    background-color: bisque;
+}
+
+ul li:nth-child(2) {
+    color: blueviolet;
+}
+
+.one {
+    color: pink;
+}
+
+ul li:nth-child(3) {
+    list-style: square;
+    color: rgb(15, 118, 15);
+    text-decoration: underline;
+}
+
+::marker {
+    color: black;
+}

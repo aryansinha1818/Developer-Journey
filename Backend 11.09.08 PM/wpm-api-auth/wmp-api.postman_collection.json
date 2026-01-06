@@ -1,0 +1,532 @@
+{
+	"info": {
+		"_postman_id": "97263448-d8a7-4c31-b1da-7d76a25f8d1c",
+		"name": "wmp-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36278396"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register_admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fullname\": \"Aryan Sinha Admin\",\r\n  \"email\": \"aryanadmin@example.com\",\r\n  \"password\": \"admin123\",\r\n  \"adminKey\": \"doremon\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin_login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"email\": \"aryanadmin@example.com\",\r\n  \"password\": \"admin123\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "worker_register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fullname\": \"Aryan Sinha worker\",\r\n  \"email\": \"aryanworker@example.com\",\r\n  \"password\": \"worker123\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "worker_login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"email\": \"aryanworker@example.com\",\r\n  \"password\": \"worker123\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "inventory",
+			"item": [
+				{
+					"name": "admin_login_add_inventory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjE3ODkyMGE1NDNmYWYwMmI2ZjBlYiIsImVtYWlsIjoiYXJ5YW5hZG1pbkBleGFtcGxlLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MTIxODUwMCwiZXhwIjoxNzUxMzA0OTAwfQ.kNuakOmPaGwaib9ezl1RWeZQiwWBp8Maf-ZSwn0G5zs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Item C\",\r\n  \"quantity\": 1000,\r\n  \"location\": \"Shelf 20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/inventory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"inventory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_inventory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjE3ODkyMGE1NDNmYWYwMmI2ZjBlYiIsImVtYWlsIjoiYXJ5YW5hZG1pbkBleGFtcGxlLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MTIxODUwMCwiZXhwIjoxNzUxMzA0OTAwfQ.kNuakOmPaGwaib9ezl1RWeZQiwWBp8Maf-ZSwn0G5zs",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/inventory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"inventory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_by_id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjE3ODkyMGE1NDNmYWYwMmI2ZjBlYiIsImVtYWlsIjoiYXJ5YW5hZG1pbkBleGFtcGxlLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MTIxODUwMCwiZXhwIjoxNzUxMzA0OTAwfQ.kNuakOmPaGwaib9ezl1RWeZQiwWBp8Maf-ZSwn0G5zs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/inventory/68617af50a543faf02b6f0f4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"inventory",
+								"68617af50a543faf02b6f0f4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "by_ID_update_inventory",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjE3ODkyMGE1NDNmYWYwMmI2ZjBlYiIsImVtYWlsIjoiYXJ5YW5hZG1pbkBleGFtcGxlLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MTIxODUwMCwiZXhwIjoxNzUxMzA0OTAwfQ.kNuakOmPaGwaib9ezl1RWeZQiwWBp8Maf-ZSwn0G5zs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Item B\",\r\n  \"quantity\": 7,\r\n  \"location\": \"Shelf 9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/inventory/68617af50a543faf02b6f0f4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"inventory",
+								"68617af50a543faf02b6f0f4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_by_ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjE3ODkyMGE1NDNmYWYwMmI2ZjBlYiIsImVtYWlsIjoiYXJ5YW5hZG1pbkBleGFtcGxlLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MTIxODUwMCwiZXhwIjoxNzUxMzA0OTAwfQ.kNuakOmPaGwaib9ezl1RWeZQiwWBp8Maf-ZSwn0G5zs",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/inventory/68616a473bf97c82560fcb44",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"inventory",
+								"68616a473bf97c82560fcb44"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "worker_login_add_order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjE3OWQwMGE1NDNmYWYwMmI2ZjBlZiIsImVtYWlsIjoiYXJ5YW53b3JrZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoid29ya2VyIiwiaWF0IjoxNzUxMjE4NzcyLCJleHAiOjE3NTEzMDUxNzJ9.i1kp9bEZAuh0I7ZRsB14PMoJmxXVdRxyJj3xtYWalSM",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"item\": \"Drums\",\r\n  \"quantity\": 400,\r\n  \"status\": \"shipped\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_orders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjE3OWQwMGE1NDNmYWYwMmI2ZjBlZiIsImVtYWlsIjoiYXJ5YW53b3JrZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoid29ya2VyIiwiaWF0IjoxNzUxMjE4NzcyLCJleHAiOjE3NTEzMDUxNzJ9.i1kp9bEZAuh0I7ZRsB14PMoJmxXVdRxyJj3xtYWalSM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_order_by_id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjE3OWQwMGE1NDNmYWYwMmI2ZjBlZiIsImVtYWlsIjoiYXJ5YW53b3JrZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoid29ya2VyIiwiaWF0IjoxNzUxMjE4NzcyLCJleHAiOjE3NTEzMDUxNzJ9.i1kp9bEZAuh0I7ZRsB14PMoJmxXVdRxyJj3xtYWalSM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/order/686180060a543faf02b6f10c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"686180060a543faf02b6f10c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_order",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjE3OWQwMGE1NDNmYWYwMmI2ZjBlZiIsImVtYWlsIjoiYXJ5YW53b3JrZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoid29ya2VyIiwiaWF0IjoxNzUxMjE4NzcyLCJleHAiOjE3NTEzMDUxNzJ9.i1kp9bEZAuh0I7ZRsB14PMoJmxXVdRxyJj3xtYWalSM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"item\": \"Steel Drums\",\r\n  \"quantity\": 4000,\r\n  \"status\": \"pending\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/order/686180060a543faf02b6f10c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"686180060a543faf02b6f10c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_order",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjE3OWQwMGE1NDNmYWYwMmI2ZjBlZiIsImVtYWlsIjoiYXJ5YW53b3JrZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoid29ya2VyIiwiaWF0IjoxNzUxMjE4NzcyLCJleHAiOjE3NTEzMDUxNzJ9.i1kp9bEZAuh0I7ZRsB14PMoJmxXVdRxyJj3xtYWalSM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/order/68616cea3d5cf427a7e158ba",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"68616cea3d5cf427a7e158ba"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_order_admin_level_clearance",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjE3ODkyMGE1NDNmYWYwMmI2ZjBlYiIsImVtYWlsIjoiYXJ5YW5hZG1pbkBleGFtcGxlLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MTIyMDYyNiwiZXhwIjoxNzUxMzA3MDI2fQ.DTqp6Ee-7Km1fgYJD9KaLcIG13CmOWkMWIlo19JBMEc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/order/68616cea3d5cf427a7e158ba",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"68616cea3d5cf427a7e158ba"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,7 @@
+:root {
+  --ho: #cd7d05;
+}
+
+* {
+  background-color: var(--ho);
+}

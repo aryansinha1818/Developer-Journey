@@ -1,0 +1,9 @@
+nodejs is a js runtime environment.
+jab tak node chalega js ka server chalta rahega
+
+writefile
+appendfile
+copyfile
+rename
+unlink
+fs.rmdir - it helps to remove blank directory, not with a file in it

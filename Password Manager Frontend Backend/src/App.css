@@ -1,0 +1,10 @@
+.bg {
+  background-color: #e1f3e8;
+}
+
+@media only screen and (max-width: 500px) {
+  .copyUsername .copyPassword {
+    position: relative;
+    bottom: 2px;
+  }
+}

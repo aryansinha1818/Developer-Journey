@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <body>
+      <nav>
+        <ul>
+          <li class="brand">
+            <img src="Images/logo.png" alt="Spotify" />Spotify
+          </li>
+          <li>Home</li>
+          <li>About</li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        <div class="songList">
+          <h1>Best of NCS - No Copyright Sounds</h1>
+          <div class="songItemContainer">
+            <div class="songItem">
+              <img src="Images/cover.jpg" alt="1" />
+              <span class="songName">Walk by me</span>
+              <span class="songlistplay">
+                <span class="timeStamp">
+                  <span class="time">01:42</span>
+                  <i id="0" class="far fa-3x fa-play-circle songItemPlay"></i
+                ></span>
+              </span>
+            </div>
+            <div class="songItem">
+              <img src="Images/cover1.jpg" alt="1" />
+              <span class="songName">Walk by me</span>
+              <span class="songlistplay">
+                <span class="timeStamp">
+                  <span class="time">01:45</span>
+                  <i id="1" class="far fa-3x fa-play-circle songItemPlay"></i
+                ></span>
+              </span>
+            </div>
+            <div class="songItem">
+              <img src="Images/cover2.jpg" alt="1" />
+              <span class="songName">Walk by me</span>
+              <span class="songlistplay">
+                <span class="timeStamp">
+                  <span class="time">01:27</span>
+                  <i id="2" class="far fa-3x fa-play-circle songItemPlay"></i
+                ></span>
+              </span>
+            </div>
+            <div class="songItem">
+              <img src="Images/cover3.jpg" alt="1" />
+              <span class="songName">Walk by me</span>
+              <span class="songlistplay">
+                <span class="timeStamp">
+                  <span class="time">01:28</span>
+                  <i id="3" class="far fa-3x fa-play-circle songItemPlay"></i
+                ></span>
+              </span>
+            </div>
+            <div class="songItem">
+              <img src="Images/cover4.jpg" alt="1" />
+              <span class="songName">Walk by me</span>
+              <span class="songlistplay">
+                <span class="timeStamp">
+                  <span class="time">02:40</span>
+                  <i id="4" class="far fa-3x fa-play-circle songItemPlay"></i
+                ></span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="songBanner"></div>
+      </div>
+
+      <div class="bottom">
+        <input
+          type="range"
+          name="range"
+          value="0"
+          id="myProgressBar"
+          min="0"
+          max="100"
+        />
+        <div class="items">
+          <!-- font-awesome Icons -->
+          <i class="fas fa-3x fa-step-backward" id="previous"></i>
+          <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+          <i class="fas fa-3x fa-step-forward" id="next"></i>
+        </div>
+        <div class="songInfo">
+          <img src="Images/music-gif.gif" id="gif" width="50px" />
+          <span id="masterSongName">Melody</span>
+        </div>
+      </div>
+    </body>
+    <script
+      src="https://kit.fontawesome.com/077e8f229f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

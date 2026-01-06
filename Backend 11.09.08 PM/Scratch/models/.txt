@@ -1,0 +1,22 @@
+usermodel
+full name -str
+email - string
+password 
+cart 
+isAdmin - if yes then create pdt else buy pdt 
+orders - boolean
+contact - number
+dob - number 
+picture - string // memory storage -- in db 
+
+
+product
+image 
+name
+discount 
+price 
+bgcolor 
+panelcolor 
+textcolor
+
+1 owner

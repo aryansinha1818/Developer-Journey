@@ -1,0 +1,56 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+    container_name: contest-backend
+    ports:
+      - "5050:5050"
+    environment:
+      NODE_ENV: production
+      PORT: 5050
+      MONGO_URI: mongodb://admin:qwerty@mongodb:27017/contestdb1807?authSource=admin
+      JWT_SECRET: supersecret123
+    depends_on:
+      - mongodb
+    restart: always
+
+  frontend:
+    build: ./frontend
+    container_name: contest-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_BASE: http://backend:5050/api
+    depends_on:
+      - backend
+    restart: always
+
+  mongodb:
+    image: mongo:6.0
+    container_name: contest-mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: qwerty
+    volumes:
+      - mongodb_aryan_data:/data/db
+    restart: always
+
+  mongo-express:
+    image: mongo-express:latest
+    container_name: contest-mongo-express
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongodb
+      ME_CONFIG_MONGODB_PORT: 27017
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: qwerty
+    depends_on:
+      - mongodb
+    restart: always
+
+volumes:
+  mongodb_aryan_data:

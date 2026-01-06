@@ -1,0 +1,30 @@
+body {
+    font-size: 22px;
+}
+
+html {
+    background-color: azure;
+    font-family: monospace;
+}
+
+h1 {
+    color: rgb(20, 213, 20);
+}
+
+p {
+    color: purple;
+}
+
+.gray {
+    color: red;
+}
+
+#italics {
+    color: brown;
+}
+
+p span {
+    color: rgb(166, 242, 15);
+    text-transform: uppercase;
+    background-color: black;
+}
